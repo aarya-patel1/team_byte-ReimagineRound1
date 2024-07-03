@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airbnb - Unique Travel & Experiences</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/your-fontawesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal" id="signupModal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2>Sign Up</h2>
+          <form id="signupForm">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button type="submit">Sign Up</button>
+          </form>
+          <p>Already have an account? <a href="#" id="switchToLogin">Log in</a></p>
+        </div>
+      </div>
+      <div class="modal" id="loginModal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2>Log In</h2>
+          <form id="loginForm">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Log In</button>
+          </form>
+          <p>Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg?size=338&ext=jpg&ga=GA1.1.1141335507.1719360000&semt=ais_user"
+            alt="Airbnb"
+          />
+          <span>airbnb</span>
+        </div>
+        <ul>
+          <li><a href="#featured-destinations" id="exploreLink">Explore</a></li>
+          <li><a href="#footer" id="helpLink">Help</a></li>
+          <li><button class="join-btn" id="joinBtn">Join us today</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Discover Unique Travel and Unforgettable Experiences</h1>
+          <form class="search-form" action="#" method="get">
+            <label for="checkin"><h3>Check-In:</h3></label>
+            <input type="date" placeholder="Check-in" id="checkin" />
+            <label for="checkout"><h3>Check-Out:</h3></label>
+            <input type="date" placeholder="Check-out" id="checkout" />
+            <input
+              type="text"
+              placeholder="Where are you going?"
+              id="destination"
+            />
+            <select id="guests">
+              <option value="">Guests</option>
+              <option value="1">1 guest</option>
+              <option value="2">2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4+ guests</option>
+            </select>
+            <button type="submit">Search</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="featured-destinations" id="featured-destinations">
+        <h2>Featured Destinations</h2>
+        <div class="destination-slider">
+          <button class="slider-btn prev-btn">&lt;</button>
+          <div class="destination-container">
+            <div class="destination-item" style="background-image: url(https://etias.com/assets/uploads/8%20Things%20To%20Do%20in%20Paris,%20France.jpg);">
+              <h3>Paris, France</h3>
+            </div>
+            <div class="destination-item" style="background-image: url(https://res.klook.com/image/upload/q_85/c_fill,w_750/v1654586251/blog/wsnqunszlajd5ypjo29l.jpg);">
+              <h3>Bali, Indonesia</h3>
+            </div>
+            <div class="destination-item" style="background-image: url(https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg);">
+              <h3>New York, USA</h3>
+            </div>
+            <div class="destination-item" style="background-image: url(https://www.fairdealtravel.ca/oofoogha/2023/04/tokyo_japan.jpg.webp);">
+              <h3>Tokyo, Japan</h3>
+            </div>
+            <div class="destination-item" style="background-image: url(https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQArlZi9HTXkgbTncljwbOfzEihbECtbZECieN470M9uAjl_woTDVaDHUS-_QpIomYt);">
+              <h3>Rome, Italy</h3>
+            </div>
+            <div class="destination-item" style="background-image: url(https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcQvdQkAYJvXC22FT1aBGkTXlzpqEh1r2kf_Mn9AnlrWSxdXIZm77u-F4wqUJbQ02oz6);">
+              <h3>Istanbul, Turkey</h3>
+            </div>
+            <div class="destination-item" style="background-image: url(https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcQ-2kU5V7pQtbUzZRjQQ2nFXWSN7Cr-3IDBMXEgOXE3BP05Cl5DfhYmAhGCWGFmh9Ri);">
+              <h3>London, England</h3>
+            </div>
+            <div class="destination-item" style="background-image: url(https://d1bvpoagx8hqbg.cloudfront.net/originals/barcelona-a-cidade-das-cidades-55ec6f4d0acfc5004f0c3da7829268da.jpg);">
+              <h3>Barcelona, Spain</h3>
+            </div>
+            <div class="destination-item" style="background-image: url(https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcTnavcE0R1cW9vbZSJU9A_92W41dYEqmnQRVz51osw9lq-dYLXMRz2uqIIL1LrWzvQN);">
+              <h3>Dubai, United Arab Emirates</h3>
+            </div>
+            <div class="destination-item" style="background-image: url(https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcSMN8kpR97uny2P8AsQfYvDCm2GiHmNg2-K68PSJ6hP-x5fa3L7fxdOgCbhWB4dxcSk);">
+              <h3>Amsterdam, Netherlands</h3>
+            </div>
+            <div class="destination-item" style="background-image: url(https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRFEGuHElSkb18430ojFaA4iCAus5XYfQuhwJ531_vmI6AoRDn829re2yqUqwq9u8C1);">
+              <h3>Sydney, Australia</h3>
+            </div>
+            <div class="destination-item" style="background-image: url(https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRT5FtbpIoZwBwKqy6I3YXsmNuyaRdQk4Nt2zBw_PY5Ozk-lONDTNasU5t0xxEILVYc);">
+              <h3>Bangkok, Thailand</h3>
+            </div>
+            <div class="destination-item" style="background-image: url(https://lp-cms-production.imgix.net/2019-06/53693064.jpg);">
+              <h3>Pokhara, Nepal</h3>
+            </div>
+            <div class="destination-item" style="background-image: url(https://cdn.britannica.com/36/178136-050-7F77D46B/village-Alpine-valley-canton-Saint-Moritz-Engadin.jpg);">
+              <h3>Switzerland, Europe</h3>
+            </div>
+            <div class="destination-item" style="background-image: url(https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcSpKVcXnP7g6pATVJKmHgZL6-DqtaXwzyPQoCM2ThzCYMt3hn8B1VEaJc7pymUH453g);">
+              <h3>Marrakesh, Morocco</h3>
+            </div>
+            <div class="destination-item" style="background-image: url(https://media.sciencephoto.com/c0/48/82/28/c0488228-800px-wm.jpg);">
+              <h3>Dhangethi, Maldives</h3>
+            </div>
+            <div class="destination-item" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Cairo_From_Tower_%28cropped%29.jpg/640px-Cairo_From_Tower_%28cropped%29.jpg);">
+              <h3>Cairo, Egypt</h3>
+            </div>
+            <div class="destination-item" style="background-image: url(https://media.cntraveler.com/photos/590ca578c116ba6ca55ec67c/16:9/w_2560%2Cc_limit/sintra-pena-palace-GettyImages-482413302.jpg);">
+              <h3>Sintra, Portugal</h3>
+            </div>
+            <div class="destination-item" style="background-image: url(https://finland.eurtrek.com/wp-content/uploads/2022/06/Fodors-Travel-Guide-1-1.jpg);">
+              <h3>Lapland, Finland</h3>
+            </div>
+            <div class="destination-item" style="background-image: url(https://statics.vinpearl.com/mu-cang-chai-vietnam-1_1690179154.jpg);">
+              <h3>Mù Cang Chải, Vietnam</h3>
+            </div>
+          </div>
+          <button class="slider-btn next-btn">&gt;</button>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <h2>What guests are saying about Airbnb homes</h2>
+        <p>
+          Our homes were rated <strong>4.8 out of 5 stars</strong> with
+          <strong>350,000+ reviews</strong>
+        </p>
+        <div class="review-grid" id="reviewGrid">
+          <!-- Review items will be dynamically added here -->
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div class="footer-content">
+        <div class="footer-section description">
+          <div class="logo-container">
+            <!-- Add your logo here -->
+            <img
+            src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg?size=338&ext=jpg&ga=GA1.1.1141335507.1719360000&semt=ais_user"
+            alt="Airbnb" width="20px" height="20px"
+          />
+            <span class="footer-logo"> airbnb</span>
+          </div>
+          <p>Airbnb provides comprehensive travel services, including flight bookings and unique travel experiences. Plan your entire journey with ease, from flights to activities, for a seamless and memorable adventure.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Our Services</h3>
+          <ul>
+            <li>Travel Insurance</li>
+            <li>Cancellation Policies</li>
+            <li>Booking</li>
+            <li>Customer Support</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Careers</h3>
+          <ul>
+            <li>Job Openings</li>
+            <li>Employee Benefits</li>
+            <li>Company Culture</li>
+            <li>Application Process</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul>
+            <li>+91 1234567890</li>
+            <li>reimagine@gmail.com</li>
+            <li>patia - 10 bhubaneshwar</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Airbnb, Inc. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="scroll-to-top">↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
