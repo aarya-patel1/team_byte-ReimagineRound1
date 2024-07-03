@@ -1,18 +1,24 @@
 :root {
-    --primary-color: #ff5a5f;
-    --secondary-color: #00a699;
-    --accent-color: #fc642d;
-    --text-color: #484848;
-    --background-color: #f7f7f7;
-    --gradient-start: #ff5a5f;
-    --gradient-end: #fc642d;
-  }
-  
-  body {
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-color);
+  --primary-color: #ff5a5f;
+  --secondary-color: #00a699;
+  --accent-color: #fc642d;
+  --text-color: #484848;
+  --background-color: #f7f7f7;
+  --gradient-start: #ff5a5f;
+  --gradient-end: #fc642d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
   color: var(--text-color);
   position: relative;
 }
@@ -20,13 +26,12 @@
 header {
   background-color: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  width: 100%;
+  position: sticky;
   top: 0;
-  z-index: 15;
+  z-index: 1000;
 }
 
-nav {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,35 +52,29 @@ nav {
   font-family: "Lucida Console", Courier, monospace;
   font-size: 1.5rem;
   font-weight: 600;
-  background: linear-gradient(
-    45deg,
-    var(--gradient-start),
-    var(--gradient-end)
-  );
+  background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-nav ul {
+.nav-menu {
   display: flex;
   align-items: center;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
-nav ul li {
+.nav-menu li {
   margin-left: 1.5rem;
 }
 
-nav ul li a {
+.nav-menu li a {
   text-decoration: none;
   color: var(--text-color);
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+.nav-menu li a:hover {
   color: var(--primary-color);
 }
 
@@ -92,6 +91,21 @@ nav ul li a:hover {
 
 .join-btn:hover {
   background-color: var(--accent-color);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: var(--text-color);
 }
 
 .hero {
@@ -154,15 +168,10 @@ nav ul li a:hover {
   flex: 1;
   min-width: 200px;
   background-color: rgba(255, 255, 255, 0.9);
-  height: min-content;
 }
 
 .search-form button {
-  background: linear-gradient(
-    45deg,
-    var(--gradient-start),
-    var(--gradient-end)
-  );
+  background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
   color: #fff;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -171,31 +180,6 @@ nav ul li a:hover {
 .search-form button:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  animation: wiggle 2s ease-in-out infinite;
-}
-
-@keyframes wiggle {
-  0%, 7% {
-    transform: rotateZ(0);
-  }
-  15% {
-    transform: rotateZ(-15deg);
-  }
-  20% {
-    transform: rotateZ(10deg);
-  }
-  25% {
-    transform: rotateZ(-10deg);
-  }
-  30% {
-    transform: rotateZ(6deg);
-  }
-  35% {
-    transform: rotateZ(-4deg);
-  }
-  40%, 100% {
-    transform: rotateZ(0);
-  }
 }
 
 .featured-destinations {
@@ -251,11 +235,7 @@ nav ul li a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
   z-index: 1;
   border-radius: 10px;
 }
@@ -360,7 +340,6 @@ footer {
 
 .footer-section ul {
   list-style-type: none;
-  padding: 0;
 }
 
 .footer-section ul li {
@@ -400,11 +379,7 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: linear-gradient(
-    45deg,
-    var(--gradient-start),
-    var(--gradient-end)
-  );
+  background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
   color: white;
   border: none;
   border-radius: 50%;
@@ -502,8 +477,44 @@ footer {
 }
 
 @media (max-width: 768px) {
-  nav ul {
-    display: none;
+  .navbar {
+    padding: 1rem;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu li {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 
   .hero h1 {

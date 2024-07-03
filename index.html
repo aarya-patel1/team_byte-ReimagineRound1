@@ -9,10 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script
-      src="https://kit.fontawesome.com/your-fontawesome-kit.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="modal-overlay" id="modalOverlay">
@@ -44,19 +41,21 @@
     </div>
 
     <header>
-      <nav>
+      <nav class="navbar">
         <div class="logo">
-          <img
-            src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg?size=338&ext=jpg&ga=GA1.1.1141335507.1719360000&semt=ais_user"
-            alt="Airbnb"
-          />
+          <img src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg?size=338&ext=jpg&ga=GA1.1.1141335507.1719360000&semt=ais" alt="Airbnb" />
           <span>airbnb</span>
         </div>
-        <ul>
+        <ul class="nav-menu">
           <li><a href="#featured-destinations" id="exploreLink">Explore</a></li>
           <li><a href="#footer" id="helpLink">Help</a></li>
           <li><button class="join-btn" id="joinBtn">Join us today</button></li>
         </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </nav>
     </header>
 
@@ -69,11 +68,7 @@
             <input type="date" placeholder="Check-in" id="checkin" />
             <label for="checkout"><h3>Check-Out:</h3></label>
             <input type="date" placeholder="Check-out" id="checkout" />
-            <input
-              type="text"
-              placeholder="Where are you going?"
-              id="destination"
-            />
+            <input type="text" placeholder="Where are you going?" id="destination" />
             <select id="guests">
               <option value="">Guests</option>
               <option value="1">1 guest</option>
@@ -172,11 +167,7 @@
       <div class="footer-content">
         <div class="footer-section description">
           <div class="logo-container">
-            <!-- Add your logo here -->
-            <img
-            src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg?size=338&ext=jpg&ga=GA1.1.1141335507.1719360000&semt=ais_user"
-            alt="Airbnb" width="20px" height="20px"
-          />
+            <img src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg?size=338&ext=jpg&ga=GA1.1.1141335507.1719360000&semt=ais_user" alt="Airbnb" width="20px" height="20px" />
             <span class="footer-logo"> airbnb</span>
           </div>
           <p>Airbnb provides comprehensive travel services, including flight bookings and unique travel experiences. Plan your entire journey with ease, from flights to activities, for a seamless and memorable adventure.</p>
@@ -202,8 +193,8 @@
         <div class="footer-section">
           <h3>Contact Us</h3>
           <ul>
-            <li>+91 1234567890</li>
-            <li>reimagine@gmail.com</li>
+            <li><a href="tel:+91 1234567890">+91 1234567890</a></li>
+            <li><a href="mailto:reimagine@gmail.com">reimagine@gmail.com</a></li>
             <li>patia - 10 bhubaneshwar</li>
           </ul>
         </div>
