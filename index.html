@@ -9,33 +9,112 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/your-fontawesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
+
   <body>
     <div class="modal-overlay" id="modalOverlay">
       <div class="modal" id="signupModal">
         <div class="modal-content">
           <span class="close-btn">&times;</span>
-          <h2>Sign Up</h2>
-          <form id="signupForm">
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
-            <input type="password" placeholder="Confirm Password" required>
-            <button type="submit">Sign Up</button>
-          </form>
-          <p>Already have an account? <a href="#" id="switchToLogin">Log in</a></p>
+          <div class="modal-flex">
+            <div class="modal-image">
+              <img
+                src="https://previews.123rf.com/images/topvectors/topvectors1705/topvectors170500911/78290328-tourists-couple-with-travel-bags-people-traveling-colorful-cartoon-character-vector-illustration.jpg"
+                alt="Sign Up"
+              />
+            </div>
+            <div class="modal-form">
+              <h2>Join us Today</h2>
+              <p>Don't have an account?</p>
+              <h3>Signup</h3>
+              <form id="signupForm">
+                <input type="email" placeholder="Email" required />
+                <input type="password" placeholder="Password" required />
+                <button type="submit">Signup Now</button>
+              </form>
+              <p>Use Other Methods</p>
+              <div class="social-login">
+                <a href="#" class="social-icon"
+                  ><img
+                    src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"
+                    alt="Google"
+                /></a>
+                <a href="#" class="social-icon"
+                  ><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png"
+                    alt="Facebook"
+                /></a>
+                <a href="#" class="social-icon"
+                  ><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png"
+                    alt="LinkedIn"
+                /></a>
+                <a href="#" class="social-icon"
+                  ><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Logo_Twitter.png"
+                    alt="Twitter"
+                /></a>
+              </div>
+              <p>
+                Already have an account?
+                <a href="#" id="switchToLogin">Log in</a>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="modal" id="loginModal">
         <div class="modal-content">
           <span class="close-btn">&times;</span>
-          <h2>Log In</h2>
-          <form id="loginForm">
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit">Log In</button>
-          </form>
-          <p>Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
+          <div class="modal-flex">
+            <div class="modal-image">
+              <img
+                src="https://img.freepik.com/free-vector/people-watching-movie-home-concept_23-2148560001.jpg?t=st=1720111972~exp=1720115572~hmac=835b41f41057a472df2702378f2211dc25b2dc12f2ee7e404034835e3d078386&w=900"
+                alt="Login"
+              />
+            </div>
+            <div class="modal-form">
+              <h2>Join us Today</h2>
+              <p>Don't have an account?</p>
+              <h3>Login</h3>
+              <form id="loginForm">
+                <input type="email" placeholder="Email" required />
+                <input type="password" placeholder="Password" required />
+                <button type="submit">Login Now</button>
+              </form>
+              <p>Use Other Methods</p>
+              <div class="social-login">
+                <a href="#" class="social-icon"
+                  ><img
+                    src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"
+                    alt="Google"
+                /></a>
+                <a href="#" class="social-icon"
+                  ><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png"
+                    alt="Facebook"
+                /></a>
+                <a href="#" class="social-icon"
+                  ><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png"
+                    alt="LinkedIn"
+                /></a>
+                <a href="#" class="social-icon"
+                  ><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Logo_Twitter.png"
+                    alt="Twitter"
+                /></a>
+              </div>
+              <p>
+                Don't have an account?
+                <a href="#" id="switchToSignup">Sign up</a>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -43,7 +122,10 @@
     <header>
       <nav class="navbar">
         <div class="logo">
-          <img src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg?size=338&ext=jpg&ga=GA1.1.1141335507.1719360000&semt=ais" alt="Airbnb" />
+          <img
+            src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg?size=338&ext=jpg&ga=GA1.1.1141335507.1719360000&semt=ais"
+            alt="Airbnb"
+          />
           <span>airbnb</span>
         </div>
         <ul class="nav-menu">
@@ -61,14 +143,26 @@
 
     <main>
       <section class="hero">
+        <div class="hero-background"></div>
         <div class="hero-content">
-          <h1>Discover Unique Travel and Unforgettable Experiences</h1>
+          <h1 id="h11">
+            Discover Unique <span id="travel">Travel</span> and Unforgettable
+            Experiences
+          </h1>
           <form class="search-form" action="#" method="get">
-            <label for="checkin"><h3>Check-In:</h3></label>
+            <label for="checkin">
+              <h3>Check-In:</h3>
+            </label>
             <input type="date" placeholder="Check-in" id="checkin" />
-            <label for="checkout"><h3>Check-Out:</h3></label>
+            <label for="checkout">
+              <h3>Check-Out:</h3>
+            </label>
             <input type="date" placeholder="Check-out" id="checkout" />
-            <input type="text" placeholder="Where are you going?" id="destination" />
+            <input
+              type="text"
+              placeholder="Where are you going?"
+              id="destination"
+            />
             <select id="guests">
               <option value="">Guests</option>
               <option value="1">1 guest</option>
@@ -76,7 +170,7 @@
               <option value="3">3 guests</option>
               <option value="4">4+ guests</option>
             </select>
-            <button type="submit">Search</button>
+            <button type="submit" id="submitbutton">Search</button>
           </form>
         </div>
       </section>
@@ -86,68 +180,660 @@
         <div class="destination-slider">
           <button class="slider-btn prev-btn">&lt;</button>
           <div class="destination-container">
-            <div class="destination-item" style="background-image: url(https://etias.com/assets/uploads/8%20Things%20To%20Do%20in%20Paris,%20France.jpg);">
+            <div
+              class="destination-item"
+              style="
+                background-image: url(https://etias.com/assets/uploads/8%20Things%20To%20Do%20in%20Paris,%20France.jpg);
+              "
+            >
               <h3>Paris, France</h3>
             </div>
-            <div class="destination-item" style="background-image: url(https://res.klook.com/image/upload/q_85/c_fill,w_750/v1654586251/blog/wsnqunszlajd5ypjo29l.jpg);">
+            <div
+              class="destination-item"
+              style="
+                background-image: url(https://res.klook.com/image/upload/q_85/c_fill,w_750/v1654586251/blog/wsnqunszlajd5ypjo29l.jpg);
+              "
+            >
               <h3>Bali, Indonesia</h3>
             </div>
-            <div class="destination-item" style="background-image: url(https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg);">
+            <div
+              class="destination-item"
+              style="
+                background-image: url(https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg);
+              "
+            >
               <h3>New York, USA</h3>
             </div>
-            <div class="destination-item" style="background-image: url(https://www.fairdealtravel.ca/oofoogha/2023/04/tokyo_japan.jpg.webp);">
+            <div
+              class="destination-item"
+              style="
+                background-image: url(https://www.fairdealtravel.ca/oofoogha/2023/04/tokyo_japan.jpg.webp);
+              "
+            >
               <h3>Tokyo, Japan</h3>
             </div>
-            <div class="destination-item" style="background-image: url(https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQArlZi9HTXkgbTncljwbOfzEihbECtbZECieN470M9uAjl_woTDVaDHUS-_QpIomYt);">
+            <div
+              class="destination-item"
+              style="
+                background-image: url(https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQArlZi9HTXkgbTncljwbOfzEihbECtbZECieN470M9uAjl_woTDVaDHUS-_QpIomYt);
+              "
+            >
               <h3>Rome, Italy</h3>
             </div>
-            <div class="destination-item" style="background-image: url(https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcQvdQkAYJvXC22FT1aBGkTXlzpqEh1r2kf_Mn9AnlrWSxdXIZm77u-F4wqUJbQ02oz6);">
+            <div
+              class="destination-item"
+              style="
+                background-image: url(https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcQvdQkAYJvXC22FT1aBGkTXlzpqEh1r2kf_Mn9AnlrWSxdXIZm77u-F4wqUJbQ02oz6);
+              "
+            >
               <h3>Istanbul, Turkey</h3>
             </div>
-            <div class="destination-item" style="background-image: url(https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcQ-2kU5V7pQtbUzZRjQQ2nFXWSN7Cr-3IDBMXEgOXE3BP05Cl5DfhYmAhGCWGFmh9Ri);">
+            <div
+              class="destination-item"
+              style="
+                background-image: url(https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcQ-2kU5V7pQtbUzZRjQQ2nFXWSN7Cr-3IDBMXEgOXE3BP05Cl5DfhYmAhGCWGFmh9Ri);
+              "
+            >
               <h3>London, England</h3>
             </div>
-            <div class="destination-item" style="background-image: url(https://d1bvpoagx8hqbg.cloudfront.net/originals/barcelona-a-cidade-das-cidades-55ec6f4d0acfc5004f0c3da7829268da.jpg);">
+            <div
+              class="destination-item"
+              style="
+                background-image: url(https://d1bvpoagx8hqbg.cloudfront.net/originals/barcelona-a-cidade-das-cidades-55ec6f4d0acfc5004f0c3da7829268da.jpg);
+              "
+            >
               <h3>Barcelona, Spain</h3>
             </div>
-            <div class="destination-item" style="background-image: url(https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcTnavcE0R1cW9vbZSJU9A_92W41dYEqmnQRVz51osw9lq-dYLXMRz2uqIIL1LrWzvQN);">
+            <div
+              class="destination-item"
+              style="
+                background-image: url(https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcTnavcE0R1cW9vbZSJU9A_92W41dYEqmnQRVz51osw9lq-dYLXMRz2uqIIL1LrWzvQN);
+              "
+            >
               <h3>Dubai, United Arab Emirates</h3>
             </div>
-            <div class="destination-item" style="background-image: url(https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcSMN8kpR97uny2P8AsQfYvDCm2GiHmNg2-K68PSJ6hP-x5fa3L7fxdOgCbhWB4dxcSk);">
+            <div
+              class="destination-item"
+              style="
+                background-image: url(https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcSMN8kpR97uny2P8AsQfYvDCm2GiHmNg2-K68PSJ6hP-x5fa3L7fxdOgCbhWB4dxcSk);
+              "
+            >
               <h3>Amsterdam, Netherlands</h3>
             </div>
-            <div class="destination-item" style="background-image: url(https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRFEGuHElSkb18430ojFaA4iCAus5XYfQuhwJ531_vmI6AoRDn829re2yqUqwq9u8C1);">
+            <div
+              class="destination-item"
+              style="
+                background-image: url(https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRFEGuHElSkb18430ojFaA4iCAus5XYfQuhwJ531_vmI6AoRDn829re2yqUqwq9u8C1);
+              "
+            >
               <h3>Sydney, Australia</h3>
             </div>
-            <div class="destination-item" style="background-image: url(https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRT5FtbpIoZwBwKqy6I3YXsmNuyaRdQk4Nt2zBw_PY5Ozk-lONDTNasU5t0xxEILVYc);">
+            <div
+              class="destination-item"
+              style="
+                background-image: url(https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRT5FtbpIoZwBwKqy6I3YXsmNuyaRdQk4Nt2zBw_PY5Ozk-lONDTNasU5t0xxEILVYc);
+              "
+            >
               <h3>Bangkok, Thailand</h3>
             </div>
-            <div class="destination-item" style="background-image: url(https://lp-cms-production.imgix.net/2019-06/53693064.jpg);">
+            <div
+              class="destination-item"
+              style="
+                background-image: url(https://lp-cms-production.imgix.net/2019-06/53693064.jpg);
+              "
+            >
               <h3>Pokhara, Nepal</h3>
             </div>
-            <div class="destination-item" style="background-image: url(https://cdn.britannica.com/36/178136-050-7F77D46B/village-Alpine-valley-canton-Saint-Moritz-Engadin.jpg);">
+            <div
+              class="destination-item"
+              style="
+                background-image: url(https://cdn.britannica.com/36/178136-050-7F77D46B/village-Alpine-valley-canton-Saint-Moritz-Engadin.jpg);
+              "
+            >
               <h3>Switzerland, Europe</h3>
             </div>
-            <div class="destination-item" style="background-image: url(https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcSpKVcXnP7g6pATVJKmHgZL6-DqtaXwzyPQoCM2ThzCYMt3hn8B1VEaJc7pymUH453g);">
+            <div
+              class="destination-item"
+              style="
+                background-image: url(https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcSpKVcXnP7g6pATVJKmHgZL6-DqtaXwzyPQoCM2ThzCYMt3hn8B1VEaJc7pymUH453g);
+              "
+            >
               <h3>Marrakesh, Morocco</h3>
             </div>
-            <div class="destination-item" style="background-image: url(https://media.sciencephoto.com/c0/48/82/28/c0488228-800px-wm.jpg);">
+            <div
+              class="destination-item"
+              style="
+                background-image: url(https://media.sciencephoto.com/c0/48/82/28/c0488228-800px-wm.jpg);
+              "
+            >
               <h3>Dhangethi, Maldives</h3>
             </div>
-            <div class="destination-item" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Cairo_From_Tower_%28cropped%29.jpg/640px-Cairo_From_Tower_%28cropped%29.jpg);">
+            <div
+              class="destination-item"
+              style="
+                background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Cairo_From_Tower_%28cropped%29.jpg/640px-Cairo_From_Tower_%28cropped%29.jpg);
+              "
+            >
               <h3>Cairo, Egypt</h3>
             </div>
-            <div class="destination-item" style="background-image: url(https://media.cntraveler.com/photos/590ca578c116ba6ca55ec67c/16:9/w_2560%2Cc_limit/sintra-pena-palace-GettyImages-482413302.jpg);">
+            <div
+              class="destination-item"
+              style="
+                background-image: url(https://media.cntraveler.com/photos/590ca578c116ba6ca55ec67c/16:9/w_2560%2Cc_limit/sintra-pena-palace-GettyImages-482413302.jpg);
+              "
+            >
               <h3>Sintra, Portugal</h3>
             </div>
-            <div class="destination-item" style="background-image: url(https://finland.eurtrek.com/wp-content/uploads/2022/06/Fodors-Travel-Guide-1-1.jpg);">
+            <div
+              class="destination-item"
+              style="
+                background-image: url(https://finland.eurtrek.com/wp-content/uploads/2022/06/Fodors-Travel-Guide-1-1.jpg);
+              "
+            >
               <h3>Lapland, Finland</h3>
             </div>
-            <div class="destination-item" style="background-image: url(https://statics.vinpearl.com/mu-cang-chai-vietnam-1_1690179154.jpg);">
+            <div
+              class="destination-item"
+              style="
+                background-image: url(https://statics.vinpearl.com/mu-cang-chai-vietnam-1_1690179154.jpg);
+              "
+            >
               <h3>Mù Cang Chải, Vietnam</h3>
             </div>
           </div>
           <button class="slider-btn next-btn">&gt;</button>
+        </div>
+      </section>
+
+      <section class="featured-destinations" id="featured-destinations">
+        <h2>Featured Hotels</h2>
+        <div class="destination-slider hotel-slider">
+          <button class="slider-btn prev-btn-1 prev-btn">&lt;</button>
+          <div class="hotel-container">
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/H%C3%B4tel_Ritz.jpg/1500px-H%C3%B4tel_Ritz.jpg);
+              "
+            >
+              <h3>Hotel Ritz,Paris</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/151953367.jpg?k=db8c97c5d9192b911c366160fb9dcb5fd6148725399b6a799826701ffdd6fc3e&o=&hp=1);
+              "
+            >
+              <h3>Saint James,Paris</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://static.standard.co.uk/s3fs-public/thumbnails/image/2019/06/26/11/plaza-athenee-la-cour-jardin-hd-by-jacques-pepion.jpg?quality=75&auto=webp&width=960);
+              "
+            >
+              <h3>Plaza Athenee,Paris</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://www.kayak.com/rimg/himg/2b/97/08/leonardo-1950412-DPSBB_4126394525_O-080320.jpg?width=1366&height=768&crop=true);
+              "
+            >
+              <h3>Holidy inn,Bali</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://media.cntraveler.com/photos/55f0517c4cb36d1b2f0e63a3/16:9/w_2560%2Cc_limit/the-legian-bali-indonesia-exterior.jpg);
+              "
+            >
+              <h3>The Legian,Bali</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/511415852.jpg?k=ff337b5d82609e163fa7180e309c6925e245bc35204374a78158167da492bd58&o=&hp=1);
+              "
+            >
+              <h3>Nusa Dua,Bali</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://newyorkyimby.com/wp-content/uploads/2023/08/Evening-rendering-of-the-updated-Martinique-New-York-Hotel-Rendering-by-StudioStasis3D.jpg);
+              "
+            >
+              <h3>Manhattan,New York</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpmDR-GXWhERqyP6yf-3TaxdKbIz35_TWl4A&s);
+              "
+            >
+              <h3>roosevelt hotel,New York</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://media-cdn.tripadvisor.com/media/photo-s/2c/1f/7b/8d/central-park-columbus.jpg);
+              "
+            >
+              <h3>Trump International Hotel, New York</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ66TVDzrrhJhTBJ6XDUqdM06_ZoFbRQRz5Zw&s);
+              "
+            >
+              <h3>Imperial hotel tokyo</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://media.cntraveler.com/photos/5c9b977820c9d49e753a2abd/16:9/w_2560,c_limit/Andaz-Tokyo-Lobby-highres.jpg);
+              "
+            >
+              <h3>Andaz hotel tokyo</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://www.kayak.co.in/rimg/kimg/e4/8a/9861b97e-5e1ea859-1.jpg?width=1366&height=768&crop=true);
+              "
+            >
+              <h3>New otani,Tokyo</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://media-cdn.tripadvisor.com/media/photo-s/03/50/9e/af/hotel-best-roma.jpg);
+              "
+            >
+              <h3>Hotel Roma,Rome</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWL58fRmIOAh4pEhvjV16WvEcPzcMuwkd9uLQo7XOrbaJ1Zl7eKrBptHAhp8ZCtobCXP0&usqp=CAU);
+              "
+            >
+              <h3>Piazza navona,Rome</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/35/9b/49/hotel-colosseum.jpg?w=700&h=-1&s=1);
+              "
+            >
+              <h3>Colosseum,Rome</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://static.wixstatic.com/media/6fd670_b2e962a06b4f4c1fac22c163f19bcf9a~mv2.jpeg/v1/fill/w_740,h_493,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/6fd670_b2e962a06b4f4c1fac22c163f19bcf9a~mv2.jpeg);
+              "
+            >
+              <h3>ritz carlton, Istanbul</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW9R1KlW6vDjSwnILOGILcwT6ATfjnAir4FQ&s);
+              "
+            >
+              <h3>Accor hotel,Istanbul</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://media-cdn.tripadvisor.com/media/photo-s/1d/a5/b2/1d/cvk-park-bosphorus-hotel.jpg);
+              "
+            >
+              <h3>Bosphorus hotel,istanbul</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/01/47/de/atrium.jpg?w=700&h=-1&s=1);
+              "
+            >
+              <h3>Landmark hotel,London</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/1c/1f/f5/the-kensington.jpg?w=700&h=-1&s=1);
+              "
+            >
+              <h3>kensington hotel,London</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/113576703.jpg?k=be5a80d84566489e2ecd3d5a7371516729a7435f76a369beae0c5e4a9d1a5636&o=&hp=1);
+              "
+            >
+              <h3>Mandarin Oriental,London</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/ef/81/36/sunset-at-passeig-de.jpg?w=700&h=-1&s=1);
+              "
+            >
+              <h3>majestic hotel,Barcelona</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://media.cntraveler.com/photos/5a7b25a20bb24c1f0b5dc18c/16:9/w_2560%2Cc_limit/El-Palace-Hotel-__2018_Hotel-Facade.jpg);
+              "
+            >
+              <h3>El palace hotel, Barcelona</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://images.squarespace-cdn.com/content/v1/52da9677e4b03d314575985a/253b8715-f4b0-4f82-bac8-8ca510a12813/Barcelona+Hotels+with+Best+Views+-+Colo%CC%81n+Hotel+Barcelona.jpg);
+              "
+            >
+              <h3>Sagrada familia,Barcelona</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://focus.hidubai.com/content/images/size/w1000/2022/11/BurjAlArab-Cover.jpg);
+              "
+            >
+              <h3>Burj al arab hotel,Dubai</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://www.fairmont.com/assets/0/104/2541/2546/4576/4577/e8b31990-fdd3-4d72-86b9-18f2fdcd0abf.jpg);
+              "
+            >
+              <h3>fairmont hotel,Dubai</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://assets.kerzner.com/api/public/content/18027857b7fe4810bf3b799d63022b56?v=88190ae7&t=w2880);
+              "
+            >
+              <h3>Atlantis, The Palm,Dubai</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEkbUcdvhqCeUJ8AwTge3o-Hi0k6hZnrQ5UA&s);
+              "
+            >
+              <h3>Eden hotel,Amsterdam</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/c3/bc/8d/caption.jpg?w=700&h=-1&s=1);
+              "
+            >
+              <h3>Leonardo hotel, Amsterdam</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://digital.ihg.com/is/image/ihg/holiday-inn-express-amsterdam-4127384463-4x3);
+              "
+            >
+              <h3>Holiday inn express,Amsterdam</h3>
+            </div>
+
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/457081182.jpg?k=36065ebf532688a066f798c67c5decad60256190aacdf462331a800059ba11dd&o=&hp=1);
+              "
+            >
+              <h3>Metro hotel,Sydney</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://www.sofitelsydneydarlingharbour.com.au/wp-content/uploads/sites/87/2021/05/Hero-Hotel-1170x780.jpg);
+              "
+            >
+              <h3>Sofitel hotel,Sydney</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://images.trvl-media.com/lodging/1000000/50000/43700/43684/aa6a5142.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill);
+              "
+            >
+              <h3>Rendezvous hotel,Sydney</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://img1.10bestmedia.com/Images/Photos/232275/shergrand_55_660x440_201405311407.jpg);
+              "
+            >
+              <h3>Sukhumvit,Bangkok</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/477225536.jpg?k=f9dc83e8365747654fb3415b6f4d0def1673dbbb90b44fb856a1f29abe340980&o=&hp=1);
+              "
+            >
+              <h3>Clover Asoke,Bangkok</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://q-xx.bstatic.com/xdata/images/hotel/max300/426568435.jpg?k=6a27f837806f0623ef5fd8815e69fc638a3e5ad67f0c16f53c5e503eb3843964&o=);
+              "
+            >
+              <h3>Bangkok Marriott Hotel</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/271714580.jpg?k=509f9016ec06002c9bfeb4c5b5cd37034ff3c3c8a0c63e853de19daf142ea6db&o=&hp=1);
+              "
+            >
+              <h3>The Kantipur,Pokhara</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://lh3.googleusercontent.com/proxy/qGr-vcgqg76uSCgmIEuWkMkHRtnTqhtxDkjgVt9IcYv9kkadHw1bK3rN6DEjj3ap9DkNfBCgcmbzPD5_3uOpD1cknLG4T_tqG83_4xtOb6F5a8Ru);
+              "
+            >
+              <h3>Hotel pokhara grande</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQWTWe7mR-UtG6jf_CFAq-VlF9eekb7ya4gA&s);
+              "
+            >
+              <h3>Heritage Hotel Suite, Pokhara</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/01/e2/49/99/grand-hotel-europe.jpg?w=700&h=-1&s=1);
+              "
+            >
+              <h3>Hotel Grande,Switzerland</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://media-cdn.tripadvisor.com/media/photo-s/2c/2c/42/d6/carlton-hotel-st-moritz.jpg);
+              "
+            >
+              <h3>Hotel st moritz,switzerland</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSidJgh1-k-OPXtVi5o3yaoKvEAY5m-0A0rnQ&s);
+              "
+            >
+              <h3>switzerland alps hotel</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://www.fairmont.com/assets/0/104/2037/2042/4898/4899/d5728cc4-804a-4f93-9503-67112c36ddf3.jpg);
+              "
+            >
+              <h3>Hotel royal palm,marrakech</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/d3/c6/ef/exterior-view.jpg?w=700&h=-1&s=1);
+              "
+            >
+              <h3>Hotel mansour eddahbi,marrakech</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/7e/7f/f0/the-hotel--v3250460.jpg?w=700&h=-1&s=1);
+              "
+            >
+              <h3>Sahara palace hotel,Marrakech</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/115898075.jpg?k=80807abbea5f9e2f3c0249f670b2f40404dfce5913afde34754d4da73a3001bf&o=&hp=1);
+              "
+            >
+              <h3>lily beach resort, Dhangethi</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://images.getaroom-cdn.com/image/upload/s--6RGzbAb7--/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460/v1695303506/d86c494cae1f4fbe22d510fd472d21a5c1451355?atc=e7cd1cfa);
+              "
+            >
+              <h3>Perla,Dhangethi</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/14/61/00/nova-maldives.jpg?w=700&h=-1&s=1);
+              "
+            >
+              <h3>Nova,Dhangethi</h3>
+            </div>
+
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://www.fairmont.com/assets/0/104/2361/2366/4691/4699/d50a13da-a0a5-4927-b359-3630080bce94.jpg);
+              "
+            >
+              <h3>fairmont nile,Cairo</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/490798502.jpg?k=ff213b2b2fda3405904c7b1197db1e860bf0a44c1eec0a783abc35c7021cd28c&o=&hp=1);
+              "
+            >
+              <h3>conrad hotel,Cairo</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/270989800.jpg?k=eeb74bfa4192158fbb7bb49e9d26eaf3c8e3247e47f9516ae9a39952f5957b29&o=&hp=1);
+              "
+            >
+              <h3>cairo pyramids hotel</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://www.atsintra.com/wp-content/uploads/2019/05/hotel_sintra.jpg);
+              "
+            >
+              <h3>Hotel sintra jardim</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://www.hotelresb2b.com/images/hoteles/4547_image61025001_0.jpg);
+              "
+            >
+              <h3>arribas sintra hotel</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcn8YwSJKaksWeInkUdO7uz-PgWYvOXOZ5-A&s);
+              "
+            >
+              <h3>sintra boutique hotel</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs6zBOUqinSqu-tKgIUHqyAz-263kowszSkQ&s);
+              "
+            >
+              <h3>Rovaniemi hotel,Lapland</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/88/67/6f/arctic-snowhotel-glass.jpg?w=700&h=-1&s=1);
+              "
+            >
+              <h3>arctic snowhotel,Lapland</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://www.telegraph.co.uk/content/dam/Travel/Destinations/Europe/Finland/kakslauttanen-cabins-arctic-resort-hotel-finland.jpg);
+              "
+            >
+              <h3>aurora hotels,Lapland</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/324781152.jpg?k=7c676124bfa7f9ccbea9233f1d0e58377331ccd93d33550c4147d1f76271a2c4&o=&hp=1);
+              "
+            >
+              <h3>mù cang chải big view homestay</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://www.garrya.com/sites/garrya/files/styles/embed/public/media/images/2023-12/Refresh%201920%20x%201440%20%20%281%29.png.webp?itok=wYF3zY6e);
+              "
+            >
+              <h3>garrya mù cang chải</h3>
+            </div>
+            <div
+              class="hotel-item"
+              style="
+                background-image: url(https://autourasia.com/uploads/Travel-Guide-Vietnam/yen-bai/top-best-places-to-stay-in-mu-cang-chai-vietnam/700-mu-cang-chai-big-view-homestay.jpg);
+              "
+            >
+              <h3>chai homestay,mù cang chải</h3>
+            </div>
+          </div>
+          <button class="slider-btn next-btn next-btn-1">&gt;</button>
         </div>
       </section>
 
@@ -160,6 +846,7 @@
         <div class="review-grid" id="reviewGrid">
           <!-- Review items will be dynamically added here -->
         </div>
+        <button class="see-more-btn">See More Reviews</button>
       </section>
     </main>
 
@@ -167,45 +854,77 @@
       <div class="footer-content">
         <div class="footer-section description">
           <div class="logo-container">
-            <img src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg?size=338&ext=jpg&ga=GA1.1.1141335507.1719360000&semt=ais_user" alt="Airbnb" width="20px" height="20px" />
+            <img
+              src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg?size=338&ext=jpg&ga=GA1.1.1141335507.1719360000&semt=ais_user"
+              alt="Airbnb"
+              width="20px"
+              height="20px"
+            />
             <span class="footer-logo"> airbnb</span>
           </div>
-          <p>Airbnb provides comprehensive travel services, including flight bookings and unique travel experiences. Plan your entire journey with ease, from flights to activities, for a seamless and memorable adventure.</p>
+          <p>
+            Airbnb provides comprehensive travel services, including flight
+            bookings and unique travel experiences. Plan your entire journey
+            with ease, from flights to activities, for a seamless and memorable
+            adventure.
+          </p>
+          <div class="follow-us">
+            <h3>Follow us for more</h3>
+            <div class="social-icons">
+              <a href="#" class="social-icon"
+                ><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png"
+                  alt="Facebook"
+              /></a>
+              <a href="#" class="social-icon"
+                ><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                  alt="Instagram"
+              /></a>
+              <a href="#" class="social-icon"
+                ><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png"
+                  alt="LinkedIn"
+              /></a>
+              <a href="#" class="social-icon"
+                ><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Logo_Twitter.png"
+                  alt="Twitter"
+              /></a>
+            </div>
+          </div>
         </div>
         <div class="footer-section">
           <h3>Our Services</h3>
           <ul>
-            <li>Travel Insurance</li>
-            <li>Cancellation Policies</li>
-            <li>Booking</li>
-            <li>Customer Support</li>
+            <li><a href="#">Travel Insurance</a></li>
+            <li><a href="#">Cancellation Policies</a></li>
+            <li><a href="#">Booking</a></li>
+            <li><a href="#">Customer Support</a></li>
           </ul>
         </div>
         <div class="footer-section">
           <h3>Careers</h3>
           <ul>
-            <li>Job Openings</li>
-            <li>Employee Benefits</li>
-            <li>Company Culture</li>
-            <li>Application Process</li>
+            <li><a href="#">Job Openings</a></li>
+            <li><a href="#">Employee Benefits</a></li>
+            <li><a href="#">Company Culture</a></li>
+            <li><a href="#">Application Process</a></li>
           </ul>
         </div>
         <div class="footer-section">
           <h3>Contact Us</h3>
           <ul>
             <li><a href="tel:+91 1234567890">+91 1234567890</a></li>
-            <li><a href="mailto:reimagine@gmail.com">reimagine@gmail.com</a></li>
+            <li>
+              <a href="mailto:reimagine@gmail.com">reimagine@gmail.com</a>
+            </li>
             <li>patia - 10 bhubaneshwar</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2023 Airbnb, Inc. All rights reserved.</p>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
       </div>
     </footer>
 

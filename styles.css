@@ -52,7 +52,11 @@ header {
   font-family: "Lucida Console", Courier, monospace;
   font-size: 1.5rem;
   font-weight: 600;
-  background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    45deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -109,18 +113,131 @@ header {
 }
 
 .hero {
-  background-image: url(https://media.npr.org/assets/img/2021/10/06/gettyimages-1302813215_wide-a248aa0418c5154e72d6a555f556bf5d99e7cac7.jpg);
-  background-size: cover;
-  background-position: center;
+  position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   text-align: center;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://media.npr.org/assets/img/2021/10/06/gettyimages-1302813215_wide-a248aa0418c5154e72d6a555f556bf5d99e7cac7.jpg);
+  background-size: cover;
+  background-position: center;
+  animation: panAndZoom 20s infinite alternate;
+}
+
+#h11 {
+  background-image: radial-gradient(
+    ellipse 50% 35% at 50% 50%,
+    #6b1839,
+    transparent
+  );
+  /* transform: translate(-50%, -50%); */
+
+  font-family: "Clip";
+
+  color: #ffe6ff;
+  text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #a4783b,
+    -0.2rem 0.1rem 1rem #dea55f, 0.2rem 0.1rem 1rem #d19c33,
+    0 -0.5rem 2rem #c87633ae, 0 0.5rem 3rem #705635;
+  animation: shine 2s forwards, flicker 3s infinite;
+  animation: an 1s ease-out 1 both;
+}
+
+@keyframes an {
+  from {
+    opacity: 0;
+    transform: perspective(500px) translate3d(-35px, -40px, -150px)
+      rotate3d(1, -1, 0, 35deg);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(500px) translate3d(0, 0, 0);
+  }
+}
+
+#submitbutton:hover {
+  -webkit-animation-name: wiggle;
+  -ms-animation-name: wiggle;
+  -ms-animation-duration: 700ms;
+  -webkit-animation-duration: 700ms;
+  -webkit-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+}
+@-ms-keyframes wiggle {
+  0% {
+    -ms-transform: rotate(1deg);
+  }
+  25% {
+    -ms-transform: rotate(-1deg);
+  }
+  50% {
+    -ms-transform: rotate(1.5deg);
+  }
+  75% {
+    -ms-transform: rotate(-5deg);
+  }
+  100% {
+    -ms-transform: rotate(0deg);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes shine {
+  0% {
+    color: #a78b29;
+    text-shadow: none;
+  }
+  100% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #a4783b,
+      -0.2rem 0.1rem 1rem #dea55f, 0.2rem 0.1rem 1rem #d19c33,
+      0 -0.5rem 2rem #c87633ae, 0 0.5rem 3rem #705635;
+  }
+}
+
+@keyframes panAndZoom {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.1) translate(-2%, -1%);
+  }
+  100% {
+    transform: scale(1.05) translate(1%, -2%);
+  }
 }
 
 .hero-content {
+  position: relative;
+  z-index: 1;
   max-width: 800px;
   padding: 2rem;
   background-color: rgba(255, 255, 255, 0.1);
@@ -171,14 +288,16 @@ header {
 }
 
 .search-form button {
-  background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    45deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   color: #fff;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .search-form button:hover {
-  transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -200,13 +319,15 @@ header {
   padding: 0 40px;
 }
 
-.destination-container {
+.destination-container,
+.hotel-container {
   display: flex;
   transition: transform 0.5s ease;
   gap: 20px;
 }
 
-.destination-item {
+.destination-item,
+.hotel-item {
   flex: 0 0 calc(33.333% - 20px);
   max-width: calc(33.333% - 20px);
   height: 300px;
@@ -223,24 +344,31 @@ header {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.destination-item:hover {
+.destination-item:hover,
+.hotel-item:hover {
   transform: translateY(-5px) scale(1.03);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.destination-item::before {
+.destination-item::before,
+.hotel-item::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
   z-index: 1;
   border-radius: 10px;
 }
 
-.destination-item h3 {
+.destination-item h3,
+.hotel-item h3 {
   position: relative;
   z-index: 2;
 }
@@ -267,11 +395,13 @@ header {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.prev-btn {
+.prev-btn,
+.prev-btn-1 {
   left: 10px;
 }
 
-.next-btn {
+.next-btn,
+.next-btn-1 {
   right: 10px;
 }
 
@@ -320,6 +450,23 @@ header {
   margin-bottom: 0.5rem;
 }
 
+.see-more-btn {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
 footer {
   background: linear-gradient(45deg, #2c3e50, #34495e);
   color: #fff;
@@ -356,6 +503,29 @@ footer {
   color: var(--accent-color);
 }
 
+.follow-us {
+  margin-top: 1rem;
+}
+
+.follow-us h3 {
+  margin-bottom: 0.5rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover img {
+  transform: translateY(-3px);
+}
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -364,22 +534,15 @@ footer {
   padding-top: 1rem;
 }
 
-.social-icons a {
-  color: #fff;
-  font-size: 1.2rem;
-  margin-left: 1rem;
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: var(--accent-color);
-}
-
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    45deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   color: white;
   border: none;
   border-radius: 50%;
@@ -414,12 +577,12 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   z-index: 1001;
   width: 90%;
-  max-width: 400px;
+  max-width: 800px;
+  overflow: hidden;
 }
 
 .modal-content {
@@ -433,11 +596,38 @@ footer {
   font-size: 1.5rem;
   cursor: pointer;
   color: #999;
+  z-index: 1002;
+}
+
+.modal-flex {
+  display: flex;
+}
+
+.modal-image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+}
+
+.modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-form {
+  flex: 1;
+  padding: 2rem;
 }
 
 .modal h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--text-color);
+}
+
+.modal h3 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
 }
 
 .modal form {
@@ -474,6 +664,27 @@ footer {
 .modal a {
   color: var(--primary-color);
   text-decoration: none;
+}
+
+.modal a:hover {
+  text-decoration: underline;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-login .social-icon img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-login .social-icon:hover img {
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
@@ -534,8 +745,23 @@ footer {
     margin-top: 1rem;
   }
 
-  .destination-item {
+  .destination-item,
+  .hotel-item {
     flex: 0 0 calc(100% - 20px);
     max-width: calc(100% - 20px);
+  }
+
+  .modal-flex {
+    flex-direction: column;
+  }
+
+  .modal-image,
+  .modal-form {
+    flex: none;
+    width: 100%;
+  }
+
+  .modal-image img {
+    max-height: 200px;
   }
 }
